@@ -32,6 +32,13 @@ function fallingFlakes() {
 }
 setInterval(fallingFlakes, 200);
 
+let flakeCount = 0;
+const flakeInterval = setInterval(() => {
+    fallingFlakes();
+    flakeCount++;
+    if (flakeCount > 40) clearInterval(flakeInterval);
+}, 200);
+
 const candle = document.getElementById('candle');
 const smoke = document.getElementById('smoke');
 const blowBtn = document.getElementById('blowBtn');
