@@ -1,7 +1,7 @@
 window.addEventListener('load', () => {
     // center burst
     confetti({
-        particleCount: 100,
+        particleCount: 200,
         spread: 90,
         origin: { x: 0.4 + Math.random() * 0.2, y: 0.6 },
         colors: ['#FF6B9D', '#FFC93C', '#6B4E71', '#FF9A76']
@@ -21,7 +21,7 @@ function fallingFlakes() {
             startVelocity: 2,
             angle: 270,
             spread: 60,
-            ticks: 700,          // was 300 — gives them enough lifespan to reach the bottom
+            ticks: 300,          // was 300 — gives them enough lifespan to reach the bottom
             gravity: 0.25,       // was 0.4 — slower, gentler fall
             origin: { x: Math.random(), y: -0.1 },
             colors: ['#FF6B9D', '#FFC93C', '#6B4E71', '#FF9A76'],
@@ -30,7 +30,7 @@ function fallingFlakes() {
         });
     }
 }
-setInterval(fallingFlakes, 200);
+setInterval(fallingFlakes, 100);
 
 let flakeCount = 0;
 const flakeInterval = setInterval(() => {
@@ -58,7 +58,7 @@ blowBtn.addEventListener('click', () => {
     smoke.classList.add('show');
 
     confetti({
-        particleCount: 100,
+        particleCount: 150,
         spread: 90,
         origin: { y: 0.6 },
         colors: ['#FF6B9D', '#FFC93C', '#6B4E71', '#FF9A76']
